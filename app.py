@@ -2,14 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.models import load_model
 from sklearn.preprocessing import LabelEncoder, StandardScaler,OneHotEncoder
 import pandas as pd
 import pickle
 
 model=tf.keras.models.load_model('model.h5')
 
-model=load_model('model.h5')
+model=tf.keras.models.load_model('model.h5')
 
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
